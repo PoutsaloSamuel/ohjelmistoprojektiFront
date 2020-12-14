@@ -8,7 +8,6 @@ function HaeKaikki () {
  
  const [kysymykset, setKysymykset] = useState([]);
  const [vastaukset, setVastaukset] = useState([]);
- const [emolevyt, setEmolevyt] = useState([]);
  const [virhe, setVirhe] = useState('Haetaan');
 
  const haeKaikkiKomponentit = async () => {

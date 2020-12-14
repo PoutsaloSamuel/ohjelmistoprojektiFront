@@ -1,33 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import UusiVastaus from './UusiVastaus';
-import UusiKysymys from './UusiKysymys';
+
 import {BrowserRouter, Route, Switch } from 'react-router-dom';
 import CssBaseLine from '@material-ui/core/CssBaseline';
 import AlkumenuMUI from './AlkumenuMUI';
-import HaeKaikki from './HaeKaikki';
 import HaeKysymykset from './HaeKysymykset';
-import { Typography } from '@material-ui/core';
+import AdminUusi from './AdminUusi';
+import Tyhja from './Tyhja';
 
 
-
-
-
+	
 function App() {
+
+const [salasana, setSalasana] = useState('');
+
+const muuta = (e) => {
+       salasana=e.target.value;
+    }
  return(
 
 	
   <BrowserRouter>
 	 <div>
-		
+	 <label htmlFor='salasana'>Admin: </label>
+    <input type='text' name='salasana' value={salasana} onChange={event => setSalasana(event.target.value)}/>
+	
 	  <CssBaseLine/>
 	  <AlkumenuMUI/>
 	  <Switch>
-		<Route path='/KaikkiListaus' component={HaeKaikki}/>
-		<Route path='/Kysymyslistaus' component={HaeKysymykset}/>
-		<Route path='/UusiVastaus' component={UusiVastaus} />
-		<Route path='/UusiKysymys' component={UusiKysymys} />
-	 </Switch>
+    <Route exact path="/">
+      
+    </Route>
+    {
+      (salasana == 'admin') &&
+      <Route path='/UusiKysymys' component={AdminUusi} />
+    }
+    
+	<Route path='/UusiKysymys' component={Tyhja} />
+        <Route path='/Kysymyslistaus' component={HaeKysymykset}/>
+        
+  </Switch>
    </div>
  </BrowserRouter>
 
@@ -36,5 +48,3 @@ function App() {
   }
 
 export default App;
-
-

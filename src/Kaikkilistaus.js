@@ -158,7 +158,7 @@ function Kaikkilistaus (props) {
         
       <div>
 
-        <h2>Valitsemasi komponentit:</h2>
+        <h2>Kysymykset:</h2>
         <Grid container spacing={5}>
   
           
@@ -171,7 +171,7 @@ function Kaikkilistaus (props) {
                     
                     <CardContent>
                     <Typography>Kysymys: {vastaus.question}</Typography>
-                      <Typography>{vastaus.answer}</Typography>
+                      <Typography>Vastaus: {vastaus.answer}</Typography>
                       </CardContent>
                       <CardActions>
                       <div className={ classes.button }>

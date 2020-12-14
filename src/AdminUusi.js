@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Typography from '@material-ui/core/Typography';
-import Kaikkilistaus from './Kaikkilistaus';
+import Admin from './Admin';
 
 const url = 'http://localhost:8080';
 
-function HaeKaikki () {
+function AdminUusi () {
  
  const [kysymykset, setKysymykset] = useState([]);
  const [vastaukset, setVastaukset] = useState([]);
@@ -36,11 +36,11 @@ function HaeKaikki () {
 
  if (kysymykset.length > 0 && vastaukset.length > 0) {
    return ( 
-   <Kaikkilistaus kysymykset={ kysymykset } vastaukset={ vastaukset }/> 
+   <Admin kysymykset={ kysymykset } vastaukset={ vastaukset }/> 
    );
  }
 
  return ( <Typography>Yhtään komponenttia ei ole</Typography> );
 }
 
-export default HaeKaikki;
+export default AdminUusi;

@@ -97,23 +97,14 @@ const list = (anchor) => (
          <Typography color='inherit' onClick={ handleClose } component={Link} to ='/KysymysListaus'  variant='h5' ><IconButton color='inherit'><DragIndicatorIcon/></IconButton>Kysymykset</Typography>
       </Toolbar>
       </MenuItem>
-      <MenuItem onClick={ handleClose } component={Link} to ='/KaikkiListaus'>
-      <Toolbar>
-         <Typography color='inherit' onClick={ handleClose } component={Link} to ='/KaikkiListaus'  variant='h5' ><IconButton color='inherit'><DragIndicatorIcon/></IconButton>Vastaukset</Typography>
-      </Toolbar>
-      </MenuItem>
+      
       <Divider/>
       <MenuItem onClick={ handleClose } component={Link} to ='/UusiKysymys'>
       <Toolbar>
-         <Typography onClick={ handleClose } component={Link} to ='/UusiKysymys' color='inherit' variant='h5' ><IconButton color='inherit'><DvrIcon/></IconButton>Lisää kysymys</Typography>
+         <Typography onClick={ handleClose } component={Link} to ='/UusiKysymys' color='inherit' variant='h5' ><IconButton color='inherit'><DvrIcon/></IconButton>Admin</Typography>
       </Toolbar>
       </MenuItem>
       <Divider/>
-      <MenuItem onClick={ handleClose } component={Link} to ='/UusiVastaus'>
-      <Toolbar>
-         <Typography onClick={ handleClose } component={Link} to ='/UusiVastaus' color='inherit' variant='h5'><IconButton color='inherit'><EmojiObjectsIcon /></IconButton>Lisää vastaus</Typography>
-      </Toolbar>
-      </MenuItem>
       <Divider/>
       </Drawer>
     </AppBar>
